@@ -6,6 +6,7 @@ def before_scenario(context,scenario):
     service = Service(ChromeDriverManager().install())
     options = webdriver.ChromeOptions()
     context.driver = webdriver.Chrome(service=service, options=options)
+    context.driver.maximize_window()
 
 def after_scenario(context,scenario):
     context.driver.quit()

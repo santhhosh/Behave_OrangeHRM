@@ -1,0 +1,310 @@
+[
+{
+  "elements": [
+    {
+      "keyword": "Background",
+      "location": "features/pim.feature:3",
+      "name": "",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "features/pim.feature:4",
+          "name": "the user redirecting to the login page",
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "features/pim.feature:5",
+          "name": "the user logins in with username \"Admin\" and password \"admin123\"",
+          "step_type": "when"
+        },
+        {
+          "keyword": "When",
+          "location": "features/pim.feature:6",
+          "name": "the user clicks on the PIM menu and redirects to the PIM page",
+          "step_type": "when"
+        }
+      ],
+      "type": "background"
+    },
+    {
+      "keyword": "Scenario Outline",
+      "location": "features/pim.feature:20",
+      "name": "Addemployee -- @1.1 ",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "features/pim.feature:4",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/pim_steps.py:10"
+          },
+          "name": "the user redirecting to the login page",
+          "result": {
+            "duration": 3.3512511253356934,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "features/pim.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/pim_steps.py:16"
+          },
+          "name": "the user logins in with username \"Admin\" and password \"admin123\"",
+          "result": {
+            "duration": 6.245767831802368,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "When",
+          "location": "features/pim.feature:6",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/pim_steps.py:24"
+          },
+          "name": "the user clicks on the PIM menu and redirects to the PIM page",
+          "result": {
+            "duration": 10.999211549758911,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "When",
+          "location": "features/pim.feature:10",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/pim_steps.py:30"
+          },
+          "name": "the user clicks on Addemployee",
+          "result": {
+            "duration": 10.783920764923096,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "When",
+          "location": "features/pim.feature:11",
+          "match": {
+            "arguments": [
+              {
+                "name": "Firstname",
+                "value": "Santosh"
+              }
+            ],
+            "location": "features/steps/pim_steps.py:36"
+          },
+          "name": "the user enters firstname \"Santosh\"",
+          "result": {
+            "duration": 10.298569440841675,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "When",
+          "location": "features/pim.feature:12",
+          "match": {
+            "arguments": [
+              {
+                "name": "Middlename",
+                "value": "Avengers"
+              }
+            ],
+            "location": "features/steps/pim_steps.py:42"
+          },
+          "name": "the user enters middlename \"Avengers\"",
+          "result": {
+            "duration": 10.375301122665405,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "When",
+          "location": "features/pim.feature:13",
+          "match": {
+            "arguments": [
+              {
+                "name": "Lastname",
+                "value": "Patnana"
+              }
+            ],
+            "location": "features/steps/pim_steps.py:48"
+          },
+          "name": "the user enters lastname \"Patnana\"",
+          "result": {
+            "duration": 10.298161745071411,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "When",
+          "location": "features/pim.feature:14",
+          "match": {
+            "arguments": [
+              {
+                "name": "Employeeid",
+                "value": "0501"
+              }
+            ],
+            "location": "features/steps/pim_steps.py:54"
+          },
+          "name": "the user enters the employeeid \"0501\"",
+          "result": {
+            "duration": 5.247817516326904,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "When",
+          "location": "features/pim.feature:15",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/pim_steps.py:60"
+          },
+          "name": "the user uploads file",
+          "result": {
+            "duration": 12.232506036758423,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "When",
+          "location": "features/pim.feature:16",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/pim_steps.py:66"
+          },
+          "name": "the user clicks on the save button",
+          "result": {
+            "duration": 5.263256311416626,
+            "status": "passed"
+          },
+          "step_type": "when"
+        }
+      ],
+      "tags": [
+        "Addemployee"
+      ],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario Outline",
+      "location": "features/pim.feature:30",
+      "name": "Reports -- @1.1 ",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "features/pim.feature:4",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/pim_steps.py:10"
+          },
+          "name": "the user redirecting to the login page",
+          "result": {
+            "duration": 3.112112522125244,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "features/pim.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/pim_steps.py:16"
+          },
+          "name": "the user logins in with username \"Admin\" and password \"admin123\"",
+          "result": {
+            "duration": 4.871037483215332,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "When",
+          "location": "features/pim.feature:6",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/pim_steps.py:24"
+          },
+          "name": "the user clicks on the PIM menu and redirects to the PIM page",
+          "result": {
+            "duration": 10.973850011825562,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "When",
+          "location": "features/pim.feature:24",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/pim_steps.py:73"
+          },
+          "name": "the user clicks on Reports",
+          "result": {
+            "duration": 10.87322998046875,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "When",
+          "location": "features/pim.feature:25",
+          "match": {
+            "arguments": [
+              {
+                "name": "ReportName",
+                "value": "Employee Contact info report"
+              }
+            ],
+            "location": "features/steps/pim_steps.py:79"
+          },
+          "name": "the user enters reportname \"Employee Contact info report\" of Reports",
+          "result": {
+            "duration": 11.691739320755005,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "When",
+          "location": "features/pim.feature:26",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/pim_steps.py:85"
+          },
+          "name": "the user clicks on the search button of Reports",
+          "result": {
+            "duration": 10.081495761871338,
+            "status": "passed"
+          },
+          "step_type": "when"
+        }
+      ],
+      "tags": [
+        "Reports"
+      ],
+      "type": "scenario"
+    }
+  ],
+  "keyword": "Feature",
+  "location": "features/pim.feature:1",
+  "name": "PIM",
+  "status": "passed",
+  "tags": []
+}
+]
