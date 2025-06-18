@@ -1,0 +1,26 @@
+Feature: PIM # features/pim.feature:1
+
+  Background:   # features/pim.feature:3
+
+  @Addemployee
+  Scenario Outline: Addemployee -- @1.1                                   # features/pim.feature:20
+    Given the user redirecting to the login page                          # features/steps/pim_steps.py:10
+    When the user logins in with username "Admin" and password "admin123" # features/steps/pim_steps.py:16
+    When the user clicks on the PIM menu and redirects to the PIM page    # features/steps/pim_steps.py:24
+    When the user clicks on Addemployee                                   # features/steps/pim_steps.py:30
+    When the user enters firstname "Santosh"                              # features/steps/pim_steps.py:36
+    When the user enters middlename "Avengers"                            # features/steps/pim_steps.py:42
+    When the user enters lastname "Patnana"                               # features/steps/pim_steps.py:48
+    When the user enters the employeeid "0501"                            # features/steps/pim_steps.py:54
+    When the user uploads file                                            # features/steps/pim_steps.py:60
+    When the user clicks on the save button                               # features/steps/pim_steps.py:66
+
+  @Reports
+  Scenario Outline: Reports -- @1.1                                           # features/pim.feature:30
+    Given the user redirecting to the login page                              # features/steps/pim_steps.py:10
+    When the user logins in with username "Admin" and password "admin123"     # features/steps/pim_steps.py:16
+    When the user clicks on the PIM menu and redirects to the PIM page        # features/steps/pim_steps.py:24
+    When the user clicks on Reports                                           # features/steps/pim_steps.py:73
+    When the user enters reportname "Employee Contact info report" of Reports # features/steps/pim_steps.py:79
+    When the user clicks on the search button of Reports                      # features/steps/pim_steps.py:85
+

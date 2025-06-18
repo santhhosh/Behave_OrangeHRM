@@ -52,6 +52,8 @@ def step_impl(context):
 
     context.login_page.click_reset_password()
     time.sleep(5)
+
+#Different Icons
 @when('the user clicks on the "{Icon}" link')
 def step_impl(context, Icon):
     if Icon.lower() == "linkedin":

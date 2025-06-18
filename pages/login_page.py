@@ -21,13 +21,11 @@ class LoginPage(Baseclass):
 
         # Forgot Password
         self.forgot_password_link = (By.XPATH, "//p[@class='oxd-text oxd-text--p orangehrm-login-forgot-header']")
-        #self.forgot_password_link = (By.XPATH, "//p[text() = 'Forgot your password?']")
         self.forgot_username_input = (By.XPATH, "//input[@name = 'username']")
         self.reset_password_button = (By.XPATH, "//button[@type='submit']")
 
         # Social Media Icons
         self.linkedin_icon = (By.XPATH, "//a[@href='https://www.linkedin.com/company/orangehrm/mycompany/']")
-        #self.linkedin_icon = (By.XPATH, "//a[@href='https://www.linkedin.com/company/orangehrm/mycompany/']")
         self.facebook_icon = (By.XPATH, "//a[@href='https://www.facebook.com/OrangeHRM/']")
         self.youtube_icon = (By.XPATH, "//a[@href='https://www.youtube.com/c/OrangeHRMInc']")
         self.twitter_icon = (By.XPATH, "//a[@href='https://twitter.com/orangehrm?lang=en']")
