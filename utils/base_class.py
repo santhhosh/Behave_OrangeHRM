@@ -8,6 +8,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from pynput.keyboard import Key, Controller
 import time
+from selenium.webdriver.support.ui import Select
 
 class Baseclass:
     def __init__(self, driver):
@@ -25,7 +26,7 @@ class Baseclass:
         element.clear()
         element.send_keys(input_text)
 
-    def click_element(self, locator, timeout=30):
+    def click_element(self, locator, timeout=50):
 
         element = WebDriverWait(self.driver, timeout).until(
             EC.element_to_be_clickable((locator))
@@ -103,7 +104,7 @@ class Baseclass:
         except Exception as e:
             print(f"Alert not found or error occurred: {e}")
 
-    def upload_file_element(self, locator, timeout=20):
+    def upload_file_element(self, locator,pathoffile,timeout=20):
 
         element = WebDriverWait(self.driver, timeout).until(
             EC.element_to_be_clickable(locator)
@@ -115,10 +116,70 @@ class Baseclass:
 
 
         keyboard = Controller()
-        keyboard.type("C:\\Users\\Harini\\Documents\\flowers.gif")
+        keyboard.type(pathoffile)
         keyboard.press(Key.enter)
         keyboard.release(Key.enter)
 
+    """def switch_new_tab(self,locator,timeout=20):
+
+        parent = self.driver.current_window_handle
+        windows = self.driver.window_handles
+        for win in windows:
+            if win!= parent:
+               self.driver.switch_to.window(win)
+        element = WebDriverWait(self.driver, timeout).until(
+            EC.element_to_be_clickable(locator)
+        )
+        element.click()
+        self.driver.close()
+        self.driver.switch_to.window(parent)
+        self.driver.quit()"""
+
+
+
+    def switch_new_tab(self,timeout=10):
+        parent_window = self.driver.current_window_handle
+        windows = self.driver.window_handles
+        for win in windows:
+            if win!= parent_window:
+                self.driver.switch_to.window(win)
+
+    def switch_back_parent_tab(self, timeout=10):
+        parent_window = self.driver.current_window_handle
+        #self.driver.close()
+        self.driver.switch_to.window(parent_window)
+
+    def click_dropdown_element(self, locator, text, timeout=10):
+
+        element = WebDriverWait(self.driver, timeout).until(
+            EC.presence_of_element_located(locator)
+        )
+        dropdown = Select(element)
+        dropdown.select_by_visible_text(text)
+
+    """def get_url_when_title_is(self, expected_title, timeout=10):
+        wait = WebDriverWait(self.driver, timeout)
+        wait.until(EC.title_is(expected_title))
+        return self.driver.current_url"""
+
+    """def get_current_url(self):
+        return self.driver.current_url"""
+
+    def get_current_url(self):
+        current_url = self.driver.current_url
+        print(f"Current URL: {current_url}")
+        return current_url
+
+    def click_buttons(self, locator, action):
+        time.sleep(2)
+        action = action.lower()
+        if action == "save":
+            self.click_element(locator)
+        elif action == "cancel":
+            self.click_element(locator)
+        else:
+            print("Invalid action. Please specify 'save' or 'cancel'.")
+        time.sleep(2)
 
 
 

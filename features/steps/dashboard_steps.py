@@ -40,149 +40,110 @@ def step_click_out_in_button(context):
     time.sleep(5)
 
 #Dashboard Page_upgrade button
-@when('the user clicks on the upgrade button')
+@when('click on upgrade button')
 def step_click_upgrade_button(context):
     time.sleep(5)
     context.dashboard_page.click_upgrade_button()
     time.sleep(5)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-"""@when('the user clicks on myleave')
-def step_click_myleave_item(context):
+@when('the user selects locale "{locale}"')
+def step_click_upgrade_button_locale(context,locale):
     time.sleep(5)
-    context.dashboard_page.click_leave_myleave()
+    context.dashboard_page.click_upgrade_button_locale(locale)
     time.sleep(5)
 
-@when('the user enters FromDate "{FromDate}"')
-def step_click_myleave_calendar(context,FromDate):
-    #time.sleep(5)
-    context.dashboard_page.click_leave_myleave_fromdate(FromDate)
-    time.sleep(5)"""
-
-
-
-
-
-
-
-
-
-
-
-
-"""@when('the user enters date in the calendar "{Date}"')
-def step_enter_calendar(context,Date):
+@when('click on bookademo button')
+def step_click_upgrade_button_bookademo(context):
     time.sleep(5)
-    context.dashboard_page.click_calendar(Date)
-
-@when('the user enters hour in the time field "{Hour}"')
-def step_enter_hour(context,Hour):
+    context.dashboard_page.click_upgrade_button_bookademo()
     time.sleep(5)
-    context.dashboard_page.click_hour(Hour)
 
-@when('the user enters minute in the time field "{Minute}"')
-def step_enter_minute(context,Minute):
+@when('the user enters firstname "{firstname}" at bookademo')
+def step_click_upgrade_button_bookademo_firstname(context,firstname):
     time.sleep(5)
-    context.dashboard_page.click_minute(Minute)
-
-@when('the user selects time section of the day')
-def step_click_ampm(context):
+    context.dashboard_page.click_upgrade_button_bookademo_firstname(firstname)
     time.sleep(5)
-    context.dashboard_page.click_ampm()"""
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-"""@when('the user click on reset button')
-def step_click_leave_reset(context):
+@when('the user enters phonenumber "{phonenumber}" at bookademo')
+def step_click_upgrade_button_bookademo_phonenumber(context,phonenumber):
     time.sleep(5)
-    context.dashboard_page.click_reset()
+    context.dashboard_page.click_upgrade_button_bookademo_phonenumber(phonenumber)
+    time.sleep(5)
+
+@when('the user enters email "{email}" at bookademo')
+def step_click_upgrade_button_bookademo_email(context,email):
+    time.sleep(5)
+    context.dashboard_page.click_upgrade_button_bookademo_email(email)
+    time.sleep(5)
+
+@when('the user enters companyname "{companyname}" at bookademo')
+def step_click_upgrade_button_bookademo_companyname(context,companyname):
+    time.sleep(5)
+    context.dashboard_page.click_upgrade_button_bookademo_companyname(companyname)
     time.sleep(5)
 
 
-@when('the user click on apply button')
-def step_click_apply(context):
+@when('the user selects country "{country}" at bookademo')
+def step_click_upgrade_button_bookademo_country(context,country):
     time.sleep(5)
-    context.dashboard_page.click_apply()
+    context.dashboard_page.click_upgrade_button_bookademo_country(country)
     time.sleep(5)
 
-@when('the user applies for leave with type, dates and comment')
-def step_apply_leave(context):
-    page = context.dashboard_page
-    page.select_leave_type()
-    page.enter_from_date("2025-06-10")
-    page.enter_to_date("2025-06-10")
-    page.enter_comment("Applying for test automation leave.")
-    page.click_apply()
-
-@then('the leave application should be submitted')
-def step_verify_leave_submission(context):
-    # Add assertion or verification based on your DOM after clicking apply
-    print("Leave applied (verify manually or add assert)")
-
-@when('the user enters from date "{FromDate}" and to date "{ToDate}"')
-def step_enter_fromdate_todate(context,FromDate,ToDate):
+@when('the user clicks submit button at bookademo')
+def step_click_upgrade_button_bookademo_submit(context):
     time.sleep(5)
-    context.dashboard_page.fromdate_enter(FromDate)
-    time.sleep(5)
-    context.dashboard_page.todate_enter(ToDate)
-
-
-@then('the user enters employee name "{EmployeeName}"')
-def step_enter_leave_hintitem(context,Search):
-    time.sleep(5)
-    context.dashboard_page.forhints_enter(Search)
+    context.dashboard_page.click_upgrade_button_bookademo_submit()
     time.sleep(5)
 
 
+#QuickLaunch_assignleave
+@when('the user goes to quicklaunch and clicks assignleave')
+def step_click_dashboard_quicklaunch_assignleave(context):
+    time.sleep(2)
+    context.dashboard_page.click_dashboard_quicklaunch_assignleave()
+    time.sleep(2)
+
+#QuickLaunch_leavelist
+@when('the user goes to quicklaunch and clicks leavelist')
+def step_click_dashboard_quicklaunch_leavelist(context):
+    time.sleep(2)
+    context.dashboard_page.click_dashboard_quicklaunch_leavelist()
+    time.sleep(2)
+
+#QuickLaunch_timesheets
+@when('the user goes to quicklaunch and clicks timesheets')
+def step_click_dashboard_quicklaunch_timesheets(context):
+    time.sleep(2)
+    context.dashboard_page.click_dashboard_quicklaunch_timesheets()
+    time.sleep(2)
+
+#QuickLaunch_applyleave
+@when('the user goes to quicklaunch and clicks applyleave')
+def step_click_dashboard_quicklaunch_applyleave(context):
+    time.sleep(2)
+    context.dashboard_page.click_dashboard_quicklaunch_applyleave()
+    time.sleep(2)
+
+#QuickLaunch_myleave
+@when('the user goes to quicklaunch and clicks myleave')
+def step_click_dashboard_quicklaunch_myleave(context):
+    time.sleep(2)
+    context.dashboard_page.click_dashboard_quicklaunch_myleave()
+    time.sleep(2)
+
+#QuickLaunch_mytimesheet
+@when('the user goes to quicklaunch and clicks mytimesheet')
+def step_click_dashboard_quicklaunch_mytimesheet(context):
+    time.sleep(2)
+    context.dashboard_page.click_dashboard_quicklaunch_mytimesheet()
+    time.sleep(2)
 
 
-@then('the user clicks on the search button')
-def step_click_leave_searchbutton(context):
-    #time.sleep(5)
-    context.dashboard_page.click_search_button()
-    time.sleep(5)"""
+
+
+
+
+
+
+
+
