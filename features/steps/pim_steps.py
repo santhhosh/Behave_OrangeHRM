@@ -26,11 +26,134 @@ def step_click_menu_pim(context):
     time.sleep(5)
     context.pim_page.click_menu_pim()
     time.sleep(5)
+
+#configuration
+@when('the user clicks on configuration for optionalfields')
+def step_click_pim_configuration(context):
+    time.sleep(5)
+    context.pim_page.click_pim_configuration()
+    time.sleep(5)
+
+#OptionalFields
+@when('the user clicks on optionalfields')
+def step_click_pim_configuration_optionalfields(context):
+    context.pim_page.click_pim_configuration_optionalfields()
+    time.sleep(5)
+
+@when('the user clicks on showdeprecatedfields of optionalfields')
+def step_click_pim_configuration_optionalfields_showdeprecatedfields(context):
+    context.pim_page.click_pim_configuration_optionalfields_showdeprecatedfields()
+    time.sleep(5)
+
+@when('the user clicks on ShowSSNfieldinPersonalDetails of optionalfields')
+def step_click_pim_configuration_optionalfields_ShowSSNfieldinPersonalDetails(context):
+    time.sleep(5)
+    context.pim_page.click_pim_configuration_optionalfields_ShowSSNfieldinPersonalDetails()
+    time.sleep(5)
+
+@when('the user clicks on ShowSINfieldinPersonalDetails of optionalfields')
+def step_click_pim_configuration_optionalfields_ShowSINfieldinPersonalDetails(context):
+    context.pim_page.click_pim_configuration_optionalfields_ShowSINfieldinPersonalDetails()
+    time.sleep(5)
+
+@when('the user clicks on ShowUSTaxExemptionsmenu of optionalfields')
+def step_click_pim_configuration_optionalfields_ShowUSTaxExemptionsmenu(context):
+    context.pim_page.click_pim_configuration_optionalfields_ShowUSTaxExemptionsmenu()
+    time.sleep(5)
+
+@when('the user clicks on savebutton of optionalfields')
+def step_click_pim_configuration_optionalfields_save(context):
+    context.pim_page.click_pim_configuration_optionalfields_save()
+    time.sleep(5)
+
+#CustomFields
+@when('the user clicks on configuration for CustomFields and enters "{fieldname}","{screen}","{type}"')
+def step_click_pim_configuration_customfields(context,fieldname,screen,type):
+    context.pim_page.click_pim_configuration()
+    #time.sleep(5)
+    context.pim_page.click_pim_configuration_customfields(fieldname,screen,type)
+    #time.sleep(5)
+
+#DataImport
+@when('the user clicks on configuration for dataimport and uploads file')
+def step_click_pim_configuration_dataimport(context):
+    context.pim_page.click_pim_configuration()
+    context.pim_page.click_pim_configuration_dataimport()
+
+#ReportingMethods
+@when('the user clicks on configuration for ReportingMethods and enters "{name}"')
+def step_click_pim_configuration_reportingmethods(context,name):
+    context.pim_page.click_pim_configuration()
+    context.pim_page.click_pim_configuration_reportingmethods(name)
+
+#TerminationReasons
+@when('the user clicks on configuration for TerminationReasons and enters "{name}"')
+def step_click_pim_configuration_terminationreasons(context,name):
+    context.pim_page.click_pim_configuration()
+    context.pim_page.click_pim_configuration_terminationreasons(name)
+
+
+#employeelist
+@when('the user clicks on EmployeeList on employeelist')
+def step_click_pim_employeelist(context):
+    time.sleep(5)
+    context.pim_page.click_pim_employeelist()
+    time.sleep(5)
+
+@when('the user enters employeename "{employeename}" on employeelist')
+def step_enter_pim_employeelist_employeename(context,employeename):
+    #time.sleep(5)
+    context.pim_page.enter_pim_employeelist_employeename(employeename)
+    time.sleep(5)
+
+@when('the user enters employeeid "{employeeid}" on employeelist')
+def step_enter_pim_employeelist_employeeid(context,employeeid):
+    #time.sleep(5)
+    context.pim_page.enter_pim_employeelist_employeeid(employeeid)
+    time.sleep(5)
+
+@when('the user selects employmentstatus "{employmentstatus}" on employeelist')
+def step_enter_pim_employeelist_employmentstatus(context,employmentstatus):
+    #time.sleep(5)
+    context.pim_page.enter_pim_employeelist_employmentstatus(employmentstatus)
+    time.sleep(5)
+
+@when('the user selects include "{include}" on employeelist')
+def step_enter_pim_employeelist_include(context,include):
+    #time.sleep(5)
+    context.pim_page.enter_pim_employeelist_include(include)
+    time.sleep(5)
+
+@when('the user enters supervisorname "{supervisorname}" on employeelist')
+def step_enter_pim_employeelist_supervisorname(context,supervisorname):
+    #time.sleep(5)
+    context.pim_page.enter_pim_employeelist_supervisorname(supervisorname)
+    time.sleep(5)
+
+@when('the user selects jobtitle "{jobtitle}" on employeelist')
+def step_enter_pim_employeelist_jobtitle(context,jobtitle):
+    #time.sleep(5)
+    context.pim_page.enter_pim_employeelist_jobtitle(jobtitle)
+    time.sleep(5)
+
+@when('the user selects subunit "{subunit}" on employeelist')
+def step_enter_pim_employeelist_subunit(context,subunit):
+    #time.sleep(5)
+    context.pim_page.enter_pim_employeelist_subunit(subunit)
+    time.sleep(5)
+
+@when('the user clicks on search button on employeelist')
+def step_click_pim_employeelist_search(context):
+    #time.sleep(5)
+    context.pim_page.click_pim_employeelist_search()
+    time.sleep(5)
+
+
 #addemployee
 @when('the user clicks on Addemployee')
-def step_click_pim_addemployee(context):
+def step_enter_pim_employeelist_include_dropdown(context):
     time.sleep(5)
-    context.pim_page.click_pim_addemployee()
+    context.pim_page.enter_pim_employeelist_include_dropdown()
     time.sleep(5)
 
 @when('the user enters firstname "{Firstname}"')
