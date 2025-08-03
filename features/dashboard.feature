@@ -34,20 +34,29 @@ Feature: Dashboard
       |En    |santosh   | 9999988888  | s@gmail.com | LSR  |Angola |
 
   @QuickLaunch_assignleave
-  Scenario:
-    When the user goes to quicklaunch and clicks assignleave
+  Scenario Outline:
+    When the user goes to quicklaunch and clicks Assign_Leave and enters "<employee_name>","<leave_type>","<from_date>","<to_date>","<comments>"
+      Examples:
+      | employee_name  | leave_type     | from_date  | to_date  | comments |
+      |  Ravi M B      |CAN - Vacation  |2025-01-01  |2025-31-12| testing  |
 
   @QuickLaunch_leavelist
   Scenario:
     When the user goes to quicklaunch and clicks leavelist
 
   @QuickLaunch_timesheets
-  Scenario:
-    When the user goes to quicklaunch and clicks timesheets
+  Scenario Outline:
+    When the user goes to quicklaunch and clicks timesheets and enters "<timesheetperiod>"
+    Examples:
+    |timesheetperiod|
+    | 2025-16-09 to 2025-22-09 |
 
   @QuickLaunch_applyleave
-  Scenario:
-    When the user goes to quicklaunch and clicks applyleave
+  Scenario Outline:
+    When the user goes to quicklaunch and clicks applyleave and enters "<employee_name>","<leave_type>","<from_date>","<to_date>","<comments>"
+      Examples:
+      | employee_name  | leave_type     | from_date  | to_date  | comments |
+      |  Ravi M B      |CAN - Vacation  |2025-01-01  |2025-31-12| testing  |
 
   @QuickLaunch_myleave
   Scenario:

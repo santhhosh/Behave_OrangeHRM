@@ -499,19 +499,37 @@ def step_click_leave_leavelist_search_button(context):
     time.sleep(5)
 
 #Assign_Leave
-@when('the user clicks on Assign_Leave')
-def step_click_leave_assignleave(context):
-    time.sleep(2)
+@when('the user clicks on Assign_Leave and enters "{employee_name}","{leave_type}","{from_date}","{to_date}","{comments}"')
+def step_click_leave_assignleave(context,employee_name,
+                                      leave_type,
+                                      from_date,
+                                      to_date,
+                                      comments):
+    #time.sleep(2)
     context.leave_page.click_leave_assignleave()
-    time.sleep(2)
+    context.leave_page.select_leave_assignleave_form(employee_name,
+                                                     leave_type,
+                                                     from_date,
+                                                     to_date,
+                                                     comments)
 
-@when('the user enters employeename "{employee_name}" of Assign_Leave')
-def step_select_leave_assignleave_employeename(context,employee_name):
-    time.sleep(5)
-    context.leave_page.select_leave_assignleave_employeename(employee_name)
-    time.sleep(5)
+    #time.sleep(2)
 
-@when('the user selects leave type "{leave_type}" from dropdown of Assign_Leave')
+"""@when('the user enters employeename "{employee_name}" of Assign_Leave')
+def step_select_leave_assignleave_employeename(context,employee_name,
+                                      leave_type,
+                                      from_date,
+                                      to_date,
+                                      comments):
+    
+    context.leave_page.select_leave_assignleave_form(employee_name,
+                                      leave_type,
+                                      from_date,
+                                      to_date,
+                                      comments)"""
+
+
+"""@when('the user selects leave type "{leave_type}" from dropdown of Assign_Leave')
 def step_select_leave_assignleave_leave_type_dropdown(context,leave_type):
     time.sleep(5)
     context.leave_page.select_leave_assignleave_leave_type_dropdown(leave_type)
@@ -545,7 +563,7 @@ def step_click_leave_assignleave_assign_button(context):
 def step_click_leave_assignleave_confirm_button(context):
     time.sleep(5)
     context.leave_page.click_leave_assignleave_confirm_button()
-    time.sleep(5)
+    time.sleep(5)"""
 
 
 

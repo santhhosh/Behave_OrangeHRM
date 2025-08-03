@@ -66,13 +66,60 @@ def step_click_pim_configuration_optionalfields_save(context):
     context.pim_page.click_pim_configuration_optionalfields_save()
     time.sleep(5)
 
-#CustomFields
-@when('the user clicks on configuration for CustomFields and enters "{fieldname}","{screen}","{type}"')
-def step_click_pim_configuration_customfields(context,fieldname,screen,type):
+#Configuration_CustomFields_save
+@when('the user clicks on configuration for CustomFields and enters "{fieldname}","{screen}","{type}" and clicks on save button')
+def step_click_pim_configuration_customfields_save(context,fieldname,screen,type):
     context.pim_page.click_pim_configuration()
-    #time.sleep(5)
-    context.pim_page.click_pim_configuration_customfields(fieldname,screen,type)
-    #time.sleep(5)
+    context.pim_page.click_pim_configuration_customfields()
+    context.pim_page.click_pim_configuration_customfields_add(fieldname,screen,type)
+    context.pim_page.click_pim_save()
+
+#Configuration_CustomFields_cancel
+@when('the user clicks on configuration for CustomFields and enters "{fieldname}","{screen}","{type}" and clicks on cancel button')
+def step_click_pim_configuration_customfields_cancel(context,fieldname,screen,type):
+    context.pim_page.click_pim_configuration()
+    context.pim_page.click_pim_configuration_customfields()
+    context.pim_page.click_pim_configuration_customfields_add(fieldname,screen,type)
+    context.pim_page.click_pim_cancel()
+
+
+
+#Configuration_CustomFields_list_checkbox_delete
+@when('the user clicks on configuration for customfields and clicks on checkbox and clicks on alertcancel button')
+def step_click_pim_customfields_list_checkbox_delete(context):
+   context.pim_page.click_pim_configuration()
+   context.pim_page.click_pim_configuration_customfields()
+   context.pim_page.click_pim_list_checkbox_delete()
+
+#Configuration_CustomFields_list_deletebutton
+@when('the user clicks on configuration for customfields and clicks on delete button of list and clicks on alertcancel button')
+def step_click_pim_customfields_list_deletebutton(context):
+   context.pim_page.click_pim_configuration()
+   context.pim_page.click_pim_configuration_customfields()
+   context.pim_page.click_pim_list_deletebutton()
+
+#Configuration_CustomFields_list_editbutton_save
+@when('the user clicks on configuration for customfields and clicks on edit button of list and performs edit "{name}" and clicks on save button')
+def step_click_pim_customfields_list_editbutton_save(context,name):
+   context.pim_page.click_pim_configuration()
+   context.pim_page.click_pim_configuration_customfields()
+   context.pim_page.click_pim_list_edit_button(name)
+   context.pim_page.click_pim_save()
+
+
+#Configuration_CustomFields_list_editbutton_cancel
+@when('the user clicks on configuration for customfields and clicks on edit button of list and performs edit "{name}" and clicks on cancel button')
+def step_click_pim_customfields_list_editbutton_cancel(context,name):
+   context.pim_page.click_pim_configuration()
+   context.pim_page.click_pim_configuration_customfields()
+   context.pim_page.click_pim_list_edit_button(name)
+   context.pim_page.click_pim_cancel()
+
+
+
+
+
+
 
 #DataImport
 @when('the user clicks on configuration for dataimport and uploads file')
@@ -80,73 +127,146 @@ def step_click_pim_configuration_dataimport(context):
     context.pim_page.click_pim_configuration()
     context.pim_page.click_pim_configuration_dataimport()
 
-#ReportingMethods
-@when('the user clicks on configuration for ReportingMethods and enters "{name}"')
-def step_click_pim_configuration_reportingmethods(context,name):
+#ReportingMethods_save
+@when('the user clicks on configuration for reportingmethods and enters "{name}" and clicks on save button')
+def step_click_pim_configuration_reportingmethods_save(context,name):
     context.pim_page.click_pim_configuration()
-    context.pim_page.click_pim_configuration_reportingmethods(name)
+    context.pim_page.click_pim_configuration_reportingmethods()
+    context.pim_page.click_pim_configuration_reportingmethods_add(name)
+    context.pim_page.click_pim_save()
 
-#TerminationReasons
-@when('the user clicks on configuration for TerminationReasons and enters "{name}"')
-def step_click_pim_configuration_terminationreasons(context,name):
+#ReportingMethods_cancel
+@when('the user clicks on configuration for reportingmethods and enters "{name}" and clicks on cancel button')
+def step_click_pim_configuration_reportingmethods_cancel(context,name):
     context.pim_page.click_pim_configuration()
-    context.pim_page.click_pim_configuration_terminationreasons(name)
+    context.pim_page.click_pim_configuration_reportingmethods()
+    context.pim_page.click_pim_configuration_reportingmethods_add(name)
+    context.pim_page.click_pim_cancel()
+
+#Configuration_ReportingMethods_list_checkbox_delete
+@when('the user clicks on configuration for reportingmethods and clicks on checkbox and clicks on alertcancel button')
+def step_click_pim_reportingmethods_list_checkbox_delete(context):
+   context.pim_page.click_pim_configuration()
+   context.pim_page.click_pim_configuration_reportingmethods()
+   context.pim_page.click_pim_list_checkbox_delete()
+
+#Configuration_ReportingMethods_list_deletebutton
+@when('the user clicks on configuration for reportingmethods and clicks on delete button of list and clicks on alertcancel button')
+def step_click_pim_reportingmethods_list_deletebutton(context):
+   context.pim_page.click_pim_configuration()
+   context.pim_page.click_pim_configuration_reportingmethods()
+   context.pim_page.click_pim_list_deletebutton()
+
+#Configuration_ReportingMethods_list_editbutton_save
+@when('the user clicks on configuration for reportingmethods and clicks on edit button of list and performs edit "{name}" and clicks on save button')
+def step_click_pim_reportingmethods_list_editbutton_save(context,name):
+   context.pim_page.click_pim_configuration()
+   context.pim_page.click_pim_configuration_reportingmethods()
+   context.pim_page.click_pim_list_edit_button(name)
+   context.pim_page.click_pim_save()
 
 
-#employeelist
-@when('the user clicks on EmployeeList on employeelist')
-def step_click_pim_employeelist(context):
-    time.sleep(5)
+#Configuration_ReportingMethods_list_editbutton_cancel
+@when('the user clicks on configuration for reportingmethods and clicks on edit button of list and performs edit "{name}" and clicks on cancel button')
+def step_click_pim_reportingmethods_list_editbutton_cancel(context,name):
+   context.pim_page.click_pim_configuration()
+   context.pim_page.click_pim_configuration_reportingmethods()
+   context.pim_page.click_pim_list_edit_button(name)
+   context.pim_page.click_pim_cancel()
+
+#TerminationReasons_save
+@when('the user clicks on configuration for terminationreasons and enters "{name}" and clicks on save button')
+def step_click_pim_configuration_terminationreasons_save(context,name):
+    context.pim_page.click_pim_configuration()
+    context.pim_page.click_pim_configuration_terminationreasons()
+    context.pim_page.click_pim_configuration_terminationreasons_add(name)
+    context.pim_page.click_pim_save()
+
+#TerminationReasons_cancel
+@when('the user clicks on configuration for terminationreasons and enters "{name}" and clicks on cancel button')
+def step_click_pim_configuration_terminationreasons_cancel(context,name):
+    context.pim_page.click_pim_configuration()
+    context.pim_page.click_pim_configuration_terminationreasons()
+    context.pim_page.click_pim_configuration_terminationreasons_add(name)
+    context.pim_page.click_pim_cancel()
+
+#Configuration_TerminationReasons_list_checkbox_delete
+@when('the user clicks on configuration for terminationreasons and clicks on checkbox and clicks on alertcancel button')
+def step_click_pim_terminationreasons_list_checkbox_delete(context):
+   context.pim_page.click_pim_configuration()
+   context.pim_page.click_pim_configuration_terminationreasons()
+   context.pim_page.click_pim_list_checkbox_delete()
+
+#Configuration_TerminationReasons_list_deletebutton
+@when('the user clicks on configuration for terminationreasons and clicks on delete button of list and clicks on alertcancel button')
+def step_click_pim_terminationreasons_list_deletebutton(context):
+   context.pim_page.click_pim_configuration()
+   context.pim_page.click_pim_configuration_terminationreasons()
+   context.pim_page.click_pim_list_deletebutton()
+
+#Configuration_TerminationReasons_list_editbutton_save
+@when('the user clicks on configuration for terminationreasons and clicks on edit button of list and performs edit "{name}" and clicks on save button')
+def step_click_pim_terminationreasons_list_editbutton_save(context,name):
+   context.pim_page.click_pim_configuration()
+   context.pim_page.click_pim_configuration_terminationreasons()
+   context.pim_page.click_pim_list_edit_button(name)
+   context.pim_page.click_pim_save()
+
+
+#Configuration_TerminationReasons_list_editbutton_cancel
+@when('the user clicks on configuration for terminationreasons and clicks on edit button of list and performs edit "{name}" and clicks on cancel button')
+def step_click_pim_terminationreasons_list_editbutton_cancel(context,name):
+   context.pim_page.click_pim_configuration()
+   context.pim_page.click_pim_configuration_terminationreasons()
+   context.pim_page.click_pim_list_edit_button(name)
+   context.pim_page.click_pim_cancel()
+
+
+
+
+
+
+
+#employeelist_save
+@when('the user clicks on employeelist and enters "{employeename}","{employeeid}","{employmentstatus}","{include}","{supervisorname}","{jobtitle}","{subunit}" clicks on save button')
+def step_click_pim_employeelist_save(context,employeename,employeeid,employmentstatus,include,supervisorname,jobtitle,subunit):
     context.pim_page.click_pim_employeelist()
-    time.sleep(5)
+    context.pim_page.click_pim_employeelist_search(employeename,employeeid,employmentstatus,include,supervisorname,jobtitle,subunit)
+    context.pim_page.click_pim_save()
 
-@when('the user enters employeename "{employeename}" on employeelist')
-def step_enter_pim_employeelist_employeename(context,employeename):
-    #time.sleep(5)
-    context.pim_page.enter_pim_employeelist_employeename(employeename)
-    time.sleep(5)
+#employeelist_cancel
+@when('the user clicks on employeelist and enters "{employeename}","{employeeid}","{employmentstatus}","{include}","{supervisorname}","{jobtitle}","{subunit}" clicks on cancel button')
+def step_click_pim_employeelist_save(context,employeename,employeeid,employmentstatus,include,supervisorname,jobtitle,subunit):
+    context.pim_page.click_pim_employeelist()
+    context.pim_page.click_pim_employeelist_search(employeename,employeeid,employmentstatus,include,supervisorname,jobtitle,subunit)
+    context.pim_page.click_pim_cancel()
 
-@when('the user enters employeeid "{employeeid}" on employeelist')
-def step_enter_pim_employeelist_employeeid(context,employeeid):
-    #time.sleep(5)
-    context.pim_page.enter_pim_employeelist_employeeid(employeeid)
-    time.sleep(5)
+#employeelist_list_checkbox_delete
+@when('the user clicks on employeelist and clicks on checkbox and clicks on alertcancel button')
+def step_click_pim_employeelist_list_checkbox_delete(context):
+   context.pim_page.click_pim_employeelist()
+   context.pim_page.click_pim_list_checkbox_delete()
 
-@when('the user selects employmentstatus "{employmentstatus}" on employeelist')
-def step_enter_pim_employeelist_employmentstatus(context,employmentstatus):
-    #time.sleep(5)
-    context.pim_page.enter_pim_employeelist_employmentstatus(employmentstatus)
-    time.sleep(5)
+#employeelist_list_deletebutton
+@when('the user clicks on employeelist and clicks on delete button of list and clicks on alertcancel button')
+def step_click_pim_employeelist_list_checkbox_delete(context):
+   context.pim_page.click_pim_employeelist()
+   context.pim_page.click_pim_list_deletebutton()
 
-@when('the user selects include "{include}" on employeelist')
-def step_enter_pim_employeelist_include(context,include):
-    #time.sleep(5)
-    context.pim_page.enter_pim_employeelist_include(include)
-    time.sleep(5)
+"""#employeelist_list_editbutton_save
+@when('the user clicks on employeelist and clicks on edit button of list and performs edit "{name}" and clicks on save button')
+def step_click_pim_employeelist_list_editbutton_save(context,name):
+   context.pim_page.click_pim_employeelist()
+   context.pim_page.click_pim_list_editbutton(name)
+   context.pim_page.click_pim_save()
 
-@when('the user enters supervisorname "{supervisorname}" on employeelist')
-def step_enter_pim_employeelist_supervisorname(context,supervisorname):
-    #time.sleep(5)
-    context.pim_page.enter_pim_employeelist_supervisorname(supervisorname)
-    time.sleep(5)
+#employeelist_list_editbutton_cancel
+@when('the user clicks on employeelist and clicks on edit button of list and performs edit "{name}" and clicks on cancel button')
+def step_click_pim_employeelist_list_editbutton_cancel(context,name):
+   context.pim_page.click_pim_employeelist()
+   context.pim_page.click_pim_list_editbutton(name)
+   context.pim_page.click_pim_cancel()"""
 
-@when('the user selects jobtitle "{jobtitle}" on employeelist')
-def step_enter_pim_employeelist_jobtitle(context,jobtitle):
-    #time.sleep(5)
-    context.pim_page.enter_pim_employeelist_jobtitle(jobtitle)
-    time.sleep(5)
-
-@when('the user selects subunit "{subunit}" on employeelist')
-def step_enter_pim_employeelist_subunit(context,subunit):
-    #time.sleep(5)
-    context.pim_page.enter_pim_employeelist_subunit(subunit)
-    time.sleep(5)
-
-@when('the user clicks on search button on employeelist')
-def step_click_pim_employeelist_search(context):
-    #time.sleep(5)
-    context.pim_page.click_pim_employeelist_search()
-    time.sleep(5)
 
 
 #addemployee
@@ -192,14 +312,74 @@ def step_click_pim_addemployee_savebutton(context):
     context.pim_page.click_pim_addemployee_savebutton()
     time.sleep(5)
 
-#reports
-@when('the user clicks on Reports')
-def step_click_pim_reports(context):
-    time.sleep(5)
-    context.pim_page.click_pim_reports()
-    time.sleep(5)
+#reports_save
+@when('the user clicks on reports enters "{ReportName}" and clicks on the save button')
+def step_click_pim_reports_save(context,ReportName):
+   context.pim_page.click_pim_reports()
+   context.pim_page.click_pim_reports_reportname(ReportName)
+   context.pim_page.click_pim_save()
 
-@when('the user enters reportname "{ReportName}" of Reports')
+#reports_cancel
+@when('the user clicks on reports enters "<ReportName>" and clicks on the cancel button')
+def step_click_pim_reports_save(context,ReportName):
+   context.pim_page.click_pim_reports()
+   context.pim_page.click_pim_reports_reportname(ReportName)
+   context.pim_page.click_pim_cancel()
+
+#reports_add_save
+@when('the user clicks on reports and click on add button enters "{reportname}","{selectioncriteria}","{include}","{displayfieldgroup}","{displayfield}" and clicks on the save button')
+def step_click_pim_reports_add_save(context,reportname,selectioncriteria,include,displayfieldgroup,displayfield):
+   context.pim_page.click_pim_reports()
+   context.pim_page.click_pim_reports_add(reportname,selectioncriteria,include,displayfieldgroup,displayfield)
+   context.pim_page.click_pim_save()
+
+#reports_add_cancel
+@when('the user clicks on reports and click on add button enters "{reportname}","{selectioncriteria}","{include}","{displayfieldgroup}","{displayfield}" and clicks on the cancel button')
+def step_click_pim_reports_add_cancel(context,reportname,selectioncriteria,include,displayfieldgroup,displayfield):
+   context.pim_page.click_pim_reports()
+   context.pim_page.click_pim_reports_add(reportname,selectioncriteria,include,displayfieldgroup,displayfield)
+   context.pim_page.click_pim_cancel()
+
+#reports_list_checkbox_delete
+@when('the user clicks on reports and clicks on checkbox and clicks on alertcancel button')
+def step_click_pim_reports_list_checkbox_delete(context):
+   context.pim_page.click_pim_reports()
+   context.pim_page.click_pim_list_checkbox_delete()
+
+#reports_list_deletebutton
+@when('the user clicks on reports and clicks on delete button of list and clicks on alertcancel button')
+def step_click_pim_reports_list_checkbox_delete(context):
+   context.pim_page.click_pim_reports()
+   context.pim_page.click_pim_list_deletebutton()
+
+#reports_list_editbutton_save
+@when('the user clicks on reports and clicks on edit button of list and performs edit "{name}" and clicks on save button')
+def step_click_pim_reports_list_editbutton_save(context,name):
+   context.pim_page.click_pim_reports()
+   context.pim_page.click_pim_list_editbutton(name)
+   context.pim_page.click_pim_save()
+
+#reports_list_editbutton_cancel
+@when('the user clicks on reports and clicks on edit button of list and performs edit "{name}" and clicks on cancel button')
+def step_click_pim_reports_list_editbutton_cancel(context,name):
+   context.pim_page.click_pim_reports()
+   context.pim_page.click_pim_list_editbutton(name)
+   context.pim_page.click_pim_cancel()
+
+#reports_list_textfill
+@when('the user clicks on reports and clicks on textfill button of list')
+def step_click_pim_reports_list_editbutton_cancel(context):
+   context.pim_page.click_pim_reports()
+   context.pim_page.click_pim_list_textfill()
+
+
+
+
+
+
+
+
+"""@when('the user enters reportname "{ReportName}" of Reports')
 def step_enter_pim_reports_reportname(context,ReportName):
     time.sleep(5)
     context.pim_page.enter_pim_reports_reportname(ReportName)
@@ -209,4 +389,4 @@ def step_enter_pim_reports_reportname(context,ReportName):
 def step_click_pim_reports_search_button(context):
     time.sleep(5)
     context.pim_page.click_pim_reports_search_button()
-    time.sleep(5)
+    time.sleep(5)"""

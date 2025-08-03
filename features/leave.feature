@@ -167,15 +167,16 @@ Feature: Leave
        |2025-01-01 |2025-31-12|    Scheduled     | CAN - Personal |  Timothy Lewis Amiano |Administration |
 
   @AssignLeave
-  Scenario Outline: Assign_Leave
-    When the user clicks on Assign_Leave
-    When the user enters employeename "<employee_name>" of Assign_Leave
-    When the user selects leave type "<leave_type>" from dropdown of Assign_Leave
-    When the user selects fromdate "<from_date>" from the calendar of Assign_Leave
-    When the user selects todate "<to_date>" from the calendar of Assign_Leave
-    When the user enters comments "<comments>" of Assign_Leave
-    When the user clicks on the assign button of Assign_Leave
-    When the user clicking on the confirm button of Assign_Leave
+  Scenario Outline:
+    When the user clicks on Assign_Leave and enters "<employee_name>","<leave_type>","<from_date>","<to_date>","<comments>"
+    #When the user clicks on Assign_Leave
+    #When the user enters employeename "<employee_name>" of Assign_Leave
+    #When the user selects leave type "<leave_type>" from dropdown of Assign_Leave
+    #When the user selects fromdate "<from_date>" from the calendar of Assign_Leave
+    #When the user selects todate "<to_date>" from the calendar of Assign_Leave
+    #When the user enters comments "<comments>" of Assign_Leave
+    #When the user clicks on the assign button of Assign_Leave
+    #When the user clicking on the confirm button of Assign_Leave
 
     Examples: credentials
        | employee_name  | leave_type     | from_date  | to_date  | comments |
