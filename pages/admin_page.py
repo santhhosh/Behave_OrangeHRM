@@ -294,31 +294,30 @@ class AdminPage(Baseclass):
         self.admin_qualifications_education_cancel_locator = \
             (By.XPATH, "//div[@class='oxd-form-actions']/child::button[1]")
 
-        #Qualifications_Education_list_checkbox
-        self.admin_qualifications_education_list_pagination_locator = \
+        #Qualifications_list_checkbox_delete
+        self.admin_qualifications_list_pagination_locator = \
             (By.XPATH, "(//button[@class='oxd-pagination-page-item oxd-pagination-page-item--page'])[2]")
-        self.admin_qualifications_education_list_pagination_checkbox_locator = \
+        self.admin_qualifications_list_checkbox_locator = \
             (By.XPATH, "(//i[@class='oxd-icon bi-check oxd-checkbox-input-icon']/parent::span)[2]")
-        self.admin_qualifications_education_list_pagination_delete_locator = \
+        self.admin_qualifications_list_delete_locator = \
             (By.CSS_SELECTOR, "i[class='oxd-icon bi-trash-fill oxd-button-icon']")
-        self.admin_qualifications_education_list_pagination_alertcancel_locator = \
+        self.admin_qualifications_list_alertcancel_locator = \
             (By.CSS_SELECTOR,
              "button[class='oxd-button oxd-button--medium oxd-button--ghost orangehrm-button-margin']")
 
-        # Qualifications_Education_list_deletebutton
-        self.admin_qualifications_education_list_deletebutton_locator = \
+        # Qualifications_list_deletebutton
+        self.admin_qualifications_list_deletebutton_locator = \
             (By.XPATH,
              "(//i[@class='oxd-icon bi-trash']/parent::button)[1]")
-        # Qualifications_Education_list_editbutton
-        self.admin_qualifications_education_list_editbutton_locator = \
+
+        # Qualifications_list_editbutton
+        self.admin_qualifications_list_editbutton_locator = \
             (By.XPATH,
              "(//i[@class='oxd-icon bi-pencil-fill']/parent::button)[1]")
-        self.admin_qualifications_education_list_editbutton_name_locator = \
+        self.admin_qualifications_list_editbutton_name_locator = \
             (By.XPATH, "(//input[@class='oxd-input oxd-input--active'])[2]")
-        self.admin_qualifications_education_list_editbutton_save_locator = \
-            (By.XPATH, "//button[@type='submit']")
-        self.admin_qualifications_education_list_editbutton_cancel_locator = \
-            (By.XPATH, "(//button[@type='button'])[4]")
+
+
 
         #Qualifications_Licenses
         self.admin_qualifications_licenses_locator = \
@@ -835,7 +834,48 @@ class AdminPage(Baseclass):
             self.click_buttons(self.admin_qualifications_education_cancel_locator, "cancel")
             time.sleep(2)
 
-    #Qualifications_education_list_checkbox_delete
+    # Qualifications_list_checkbox_delete
+    def click_admin_qualifications_list_checkbox_delete(self):
+        """time.sleep(2)
+        self.click_element(self.admin_qualifications_list_pagination_locator)"""
+        time.sleep(2)
+        self.click_element(self.admin_qualifications_list_checkbox_locator)
+        time.sleep(2)
+        self.click_element(self.admin_qualifications_list_delete_locator)
+        time.sleep(2)
+        self.click_element(self.admin_qualifications_list_alertcancel_locator)
+        time.sleep(2)
+        self.click_alert_element(action=" No, Cancel ")
+
+    #Qualifications_list_deletebutton
+    def click_admin_qualifications_list_deletebutton(self):
+            time.sleep(2)
+            self.click_element(self.admin_qualifications_list_deletebutton_locator)
+            time.sleep(2)
+            self.click_element(self.admin_qualifications_list_alertcancel_locator)
+            time.sleep(2)
+            self.click_alert_element(action=" No, Cancel ")
+
+    # Qualifications_list_editbutton
+
+    def click_admin_qualifications_list_editbutton(self, level):
+        time.sleep(2)
+        self.click_element(self.admin_qualifications_list_editbutton_locator)
+        time.sleep(2)
+        self.click_calendar_element(self.admin_qualifications_list_editbutton_name_locator, level)
+        time.sleep(2)
+
+    # Qualifications_skills_list_editbutton
+    def click_admin_qualifications_skills_list_editbutton(self,name, description):
+        time.sleep(2)
+        self.click_element(self.admin_qualifications_list_editbutton_locator)
+        time.sleep(2)
+        self.click_calendar_element(self.admin_qualifications_skills_name_locator, name)
+        time.sleep(2)
+        self.click_calendar_element(self.admin_qualifications_skills_description_locator, description)
+        time.sleep(2)
+
+    """#Qualifications_education_list_checkbox_delete
     def click_admin_qualifications_education_list_checkbox_delete(self):
         time.sleep(2)
         self.click_element(self.admin_qualifications_education_list_pagination_checkbox_locator)
@@ -848,14 +888,22 @@ class AdminPage(Baseclass):
 
     #Qualifications_education_list_deletebutton
     def click_admin_qualifications_education_list_deletebutton(self):
-            """time.sleep(2)
-            self.click_element(self.admin_nationalities_list_pagination_checkbox_locator)"""
+            time.sleep(2)
+            self.click_element(self.admin_nationalities_list_pagination_checkbox_locator)
             time.sleep(2)
             self.click_element(self.admin_qualifications_education_list_deletebutton_locator)
             time.sleep(2)
             self.click_element(self.admin_qualifications_education_list_pagination_alertcancel_locator)
             time.sleep(2)
             self.click_alert_element(action=" No, Cancel ")
+
+    #Qualifications_education_list_editbutton
+    def click_admin_qualifications_education_list_editbutton(self, level):
+        time.sleep(2)
+        self.click_element(self.admin_qualifications_education_list_editbutton_locator)
+        time.sleep(2)
+        self.click_calendar_element(self.admin_qualifications_education_list_editbutton_name_locator, level)
+        time.sleep(2)"""
 
 
 

@@ -456,31 +456,41 @@ class LeavePage(Baseclass):
     def click_leave_assignleave(self):
         self.click_element(self.leave_assignleave_locator)
 
-    def select_leave_assignleave_employeename(self, employee_name):
+    def select_leave_assignleave_form(self,
+                                      employee_name,
+                                      leave_type,
+                                      from_date,
+                                      to_date,
+                                      comments):
         self.search_for_hint_option(self.leave_assignleave_employeename_locator,
                                     employee_name)
-
-    def select_leave_assignleave_leave_type_dropdown(self, leave_type):
         self.select_custom_dropdown_option(self.leave_assignleave_leave_type_dropdown_locator,
                                            leave_type)
-
-    def select_leave_assignleave_from_date(self, from_date):
         self.click_calendar_element(self.leave_assignleave_from_date_locator,
                                     from_date)
-
-    def select_leave_assignleave_to_date(self, to_date):
         self.click_calendar_element(self.leave_assignleave_to_date_locator,
                                     to_date)
-
-    def select_leave_assignleave_comments(self,comments):
-        self.insert_text_in_input_field(self.leave_assignleave_comments_locator,comments)
-
-    def click_leave_assignleave_assign_button(self):
+        self.insert_text_in_input_field(self.leave_assignleave_comments_locator, comments)
         self.click_element(self.leave_assignleave_assign_button_locator)
-
-    def click_leave_assignleave_confirm_button(self):
         self.click_element(self.leave_assignleave_confirm_button_locator)
         self.click_alert_element(action="Confirm")
+    """def select_leave_assignleave_leave_type_dropdown(self, leave_type):
+
+
+    def select_leave_assignleave_from_date(self, from_date):
+
+
+    def select_leave_assignleave_to_date(self, to_date):
+
+
+    def select_leave_assignleave_comments(self,comments):
+        
+
+    def click_leave_assignleave_assign_button(self):
+        
+
+    def click_leave_assignleave_confirm_button(self):"""
+
 
 
 

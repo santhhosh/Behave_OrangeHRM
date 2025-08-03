@@ -3,6 +3,8 @@ from pages.dashboard_page import DashboardPage
 from utils.config_reader import load_config
 from pages.login_page import LoginPage
 from utils.base_class import Baseclass
+from pages.time_page import TimePage
+from pages.leave_page import LeavePage
 
 config = load_config()
 import time
@@ -12,6 +14,7 @@ def step_open_login_page(context):
     context.driver.get(config.get('DEFAULT', 'url'))
     context.login_page = LoginPage(context.driver)
     context.dashboard_page = DashboardPage(context.driver)
+    context.leave_page = LeavePage(context.driver)
 
 @when('the user login in with username "Admin" and password "admin123"')
 def step_login_application(context):
@@ -97,11 +100,20 @@ def step_click_upgrade_button_bookademo_submit(context):
 
 
 #QuickLaunch_assignleave
-@when('the user goes to quicklaunch and clicks assignleave')
-def step_click_dashboard_quicklaunch_assignleave(context):
-    time.sleep(2)
+@when('the user goes to quicklaunch and clicks Assign_Leave and enters "{employee_name}","{leave_type}","{from_date}","{to_date}","{comments}"')
+def step_click_dashboard_quicklaunch_assignleave(context,employee_name,
+                                                     leave_type,
+                                                     from_date,
+                                                     to_date,
+                                                     comments):
+    #time.sleep(2)
     context.dashboard_page.click_dashboard_quicklaunch_assignleave()
-    time.sleep(2)
+    context.leave_page.select_leave_assignleave_form(employee_name,
+                                                     leave_type,
+                                                     from_date,
+                                                     to_date,
+                                                     comments)
+    #time.sleep(2)
 
 #QuickLaunch_leavelist
 @when('the user goes to quicklaunch and clicks leavelist')
@@ -111,12 +123,13 @@ def step_click_dashboard_quicklaunch_leavelist(context):
     time.sleep(2)
 
 #QuickLaunch_timesheets
-@when('the user goes to quicklaunch and clicks timesheets')
-def step_click_dashboard_quicklaunch_timesheets(context):
+@when('the user goes to quicklaunch and clicks timesheets and enters "{timesheetperiod}"')
+def step_click_dashboard_quicklaunch_timesheets(context,timesheetperiod):
     time.sleep(2)
     context.dashboard_page.click_dashboard_quicklaunch_timesheets()
     time.sleep(2)
-
+    context.time_page.click_time_timesheets_mytimesheets(timesheetperiod)
+    time.sleep(2)
 #QuickLaunch_applyleave
 @when('the user goes to quicklaunch and clicks applyleave')
 def step_click_dashboard_quicklaunch_applyleave(context):

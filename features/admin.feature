@@ -17,7 +17,7 @@ Feature: ADMIN
     When the user clicks on usermanagement for users and search and enters "<username>","<userrole>","<employeename>","<status>"
     Examples:
       | userrole | employeename    | status  | username |
-      | Admin    |abcd Bortoluzzi| Enabled | Admin    |
+      | Admin    |abcd Bortoluzzi  | Enabled | Admin    |
 
   #Job_JobTitles
   @JobTitles_add_save
@@ -178,6 +178,28 @@ Feature: ADMIN
       | name      | description     |
       | Jmeter    | testing purpose |
 
+  @Qualifications_skills_list_checkbox_delete
+  Scenario:
+    When the user clicks on qualifications for skills and clicks on checkbox and clicks on alertcancel button
+
+  @Qualifications_skills_list_deletebutton
+  Scenario:
+    When the user clicks on qualifications for skills and clicks on delete button of list and clicks on alertcancel button
+
+  @Qualifications_skills_list_editbutton_save
+  Scenario Outline:
+    When the user clicks on Qualifications for skills and clicks on edit button of list and performs edit "<name>","<description>" and clicks on save button
+    Examples:
+      | name      | description     |
+      | Jmeter    | testing purpose |
+
+  @Qualifications_skills_list_editbutton_cancel
+  Scenario Outline:
+    When the user clicks on Qualifications for skills and clicks on edit button of list and performs edit "<name>","<description>" and clicks on cancel button
+    Examples:
+      | name      | description     |
+      | Jmeter    | testing purpose |
+
   @Qualifications_Education_add_save
   Scenario Outline:
     When the user clicks on qualifications for education and enters "<level>" and clicks on save button
@@ -200,6 +222,20 @@ Feature: ADMIN
   Scenario:
     When the user clicks on qualifications for education and clicks on delete button of list and clicks on alertcancel button
 
+  @Qualifications_education_list_editbutton_save
+  Scenario Outline:
+    When the user clicks on Qualifications for education and clicks on edit button of list and performs edit "<level>" and clicks on save button
+    Examples:
+      | level              |
+      | Bachelor's Degree  |
+
+  @Qualifications_education_list_editbutton_cancel
+  Scenario Outline:
+    When the user clicks on Qualifications for education and clicks on edit button of list and performs edit "<level>" and clicks on cancel button
+    Examples:
+      | level              |
+      | Bachelor's Degree  |
+
   @Qualifications_Licenses_add_save
   Scenario Outline:
     When the user clicks on qualifications for licenses and enters "<name>" and clicks on save button
@@ -213,6 +249,28 @@ Feature: ADMIN
     Examples:
       | name                                             |
       | Corps Information Systems Control Officer(CISCO) |
+
+  @Qualifications_licenses_list_checkbox_delete
+  Scenario:
+    When the user clicks on qualifications for licenses and clicks on checkbox and clicks on alertcancel button
+
+  @Qualifications_licenses_list_deletebutton
+  Scenario:
+    When the user clicks on qualifications for licenses and clicks on delete button of list and clicks on alertcancel button
+
+  @Qualifications_licenses_list_editbutton_save
+  Scenario Outline:
+    When the user clicks on Qualifications for licenses and clicks on edit button of list and performs edit "<level>" and clicks on save button
+    Examples:
+      | level                                             |
+      | Corps Information Systems Control Officer(CISCO)  |
+
+  @Qualifications_licenses_list_editbutton_cancel
+  Scenario Outline:
+    When the user clicks on Qualifications for licenses and clicks on edit button of list and performs edit "<level>" and clicks on cancel button
+    Examples:
+      | level                                             |
+      | Corps Information Systems Control Officer(CISCO)  |
 
   @Qualifications_Languages_add_save
   Scenario Outline:
@@ -228,6 +286,28 @@ Feature: ADMIN
       | name   |
       | Telugu |
 
+  @Qualifications_languages_list_checkbox_delete
+  Scenario:
+    When the user clicks on qualifications for languages and clicks on checkbox and clicks on alertcancel button
+
+  @Qualifications_languages_list_deletebutton
+  Scenario:
+    When the user clicks on qualifications for languages and clicks on delete button of list and clicks on alertcancel button
+
+  @Qualifications_languages_list_editbutton_save
+  Scenario Outline:
+    When the user clicks on Qualifications for languages and clicks on edit button of list and performs edit "<level>" and clicks on save button
+    Examples:
+      | level   |
+      | Telugu  |
+
+  @Qualifications_languages_list_editbutton_cancel
+  Scenario Outline:
+    When the user clicks on Qualifications for languages and clicks on edit button of list and performs edit "<level>" and clicks on cancel button
+    Examples:
+      | level   |
+      | Telugu  |
+
   @Qualifications_memberships_add_save
   Scenario Outline:
     When the user clicks on qualifications for memberships and enters "<name>" and clicks on save button
@@ -241,6 +321,28 @@ Feature: ADMIN
     Examples:
       | name   |
       | BBA    |
+
+  @Qualifications_memberships_list_checkbox_delete
+  Scenario:
+    When the user clicks on qualifications for memberships and clicks on checkbox and clicks on alertcancel button
+
+  @Qualifications_memberships_list_deletebutton
+  Scenario:
+    When the user clicks on qualifications for memberships and clicks on delete button of list and clicks on alertcancel button
+
+  @Qualifications_memberships_list_editbutton_save
+  Scenario Outline:
+    When the user clicks on Qualifications for memberships and clicks on edit button of list and performs edit "<level>" and clicks on save button
+    Examples:
+      | level|
+      | BBA  |
+
+  @Qualifications_memberships_list_editbutton_cancel
+  Scenario Outline:
+    When the user clicks on Qualifications for memberships and clicks on edit button of list and performs edit "<level>" and clicks on cancel button
+    Examples:
+      | level   |
+      | BBA     |
 
   #@myinfo_download
   #Scenario:

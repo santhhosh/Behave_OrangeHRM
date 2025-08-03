@@ -225,6 +225,32 @@ def step_click_admin_qualifications_skills_add_save(context,name,description):
     context.admin_page.click_admin_qualifications_skills_add(name,description)
     context.admin_page.click_admin_qualifications_skills_add_cancel()
 
+#Qualifications_skills_list_checkbox_delete
+@when('the user clicks on qualifications for skills and clicks on checkbox and clicks on alertcancel button')
+def step_click_admin_qualifications_skills_list_checkbox_delete(context):
+    context.admin_page.click_admin_qualifications_skills()
+    context.admin_page.click_admin_qualifications_list_checkbox_delete()
+
+#Qualifications_skills_list_deletebutton
+@when('the user clicks on qualifications for skills and clicks on delete button of list and clicks on alertcancel button')
+def step_click_admin_qualifications_skills_list_deletebutton(context):
+    context.admin_page.click_admin_qualifications_skills()
+    context.admin_page.click_admin_qualifications_list_deletebutton()
+
+#Qualifications_skills_list_editbutton_save
+@when('the user clicks on Qualifications for skills and clicks on edit button of list and performs edit "{name}","{description}" and clicks on save button')
+def step_click_admin_qualifications_skills_list_editbutton_save(context, name, description):
+    context.admin_page.click_admin_qualifications_skills()
+    context.admin_page.click_admin_qualifications_skills_list_editbutton(name, description)
+    context.admin_page.click_admin_qualifications_skills_add_save()
+
+#Qualifications_skills_list_editbutton_cancel
+@when('the user clicks on Qualifications for skills and clicks on edit button of list and performs edit "{name}","{description}" and clicks on cancel button')
+def step_click_admin_qualifications_skills_list_editbutton_cancel(context,name,description):
+    context.admin_page.click_admin_qualifications_skills()
+    context.admin_page.click_admin_qualifications_skills_list_editbutton(name,description)
+    context.admin_page.click_admin_qualifications_skills_add_cancel()
+
 #Qualifications_education_add_save
 @when('the user clicks on qualifications for education and enters "{level}" and clicks on save button')
 def step_click_admin_qualifications_education_add_save(context,level):
@@ -241,15 +267,29 @@ def step_click_admin_qualifications_education_add_save(context,level):
 
 #Qualifications_education_list_checkbox_delete
 @when('the user clicks on qualifications for education and clicks on checkbox and clicks on alertcancel button')
-def step_click_admin_qualifications_education_add_save(context):
+def step_click_admin_qualifications_education_list_checkbox_delete(context):
     context.admin_page.click_admin_qualifications_education()
-    context.admin_page.click_admin_qualifications_education_list_checkbox_delete()
+    context.admin_page.click_admin_qualifications_list_checkbox_delete()
 
 #Qualifications_education_list_deletebutton
 @when('the user clicks on qualifications for education and clicks on delete button of list and clicks on alertcancel button')
-def step_click_admin_qualifications_education_add_save(context):
+def step_click_admin_qualifications_education_list_deletebutton(context):
     context.admin_page.click_admin_qualifications_education()
-    context.admin_page.click_admin_qualifications_education_list_deletebutton()
+    context.admin_page.click_admin_qualifications_list_deletebutton()
+
+#Qualifications_education_list_editbutton_save
+@when('the user clicks on Qualifications for education and clicks on edit button of list and performs edit "{level}" and clicks on save button')
+def step_click_admin_qualifications_education_list_editbutton_save(context, level):
+    context.admin_page.click_admin_qualifications_education()
+    context.admin_page.click_admin_qualifications_list_editbutton(level)
+    context.admin_page.click_admin_qualifications_education_add_save()
+
+#Qualifications_education_list_editbutton_cancel
+@when('the user clicks on Qualifications for education and clicks on edit button of list and performs edit "{level}" and clicks on cancel button')
+def step_click_admin_qualifications_education_list_editbutton_cancel(context, level):
+    context.admin_page.click_admin_qualifications_education()
+    context.admin_page.click_admin_qualifications_list_editbutton(level)
+    context.admin_page.click_admin_qualifications_education_add_cancel()
 
 
 #Qualifications_licenses_add_save
@@ -266,6 +306,32 @@ def step_click_admin_qualifications_licenses_add_cancel(context,name):
     context.admin_page.click_admin_qualifications_licenses_add(name)
     context.admin_page.click_admin_qualifications_licenses_add_cancel()
 
+#Qualifications_licenses_list_checkbox_delete
+@when('the user clicks on qualifications for licenses and clicks on checkbox and clicks on alertcancel button')
+def step_click_admin_qualifications_licenses_list_checkbox_delete(context):
+    context.admin_page.click_admin_qualifications_licenses()
+    context.admin_page.click_admin_qualifications_list_checkbox_delete()
+
+#Qualifications_licenses_list_deletebutton
+@when('the user clicks on qualifications for licenses and clicks on delete button of list and clicks on alertcancel button')
+def step_click_admin_qualifications_licenses_list_deletebutton(context):
+    context.admin_page.click_admin_qualifications_licenses()
+    context.admin_page.click_admin_qualifications_list_deletebutton()
+
+#Qualifications_licenses_list_editbutton_save
+@when('the user clicks on Qualifications for licenses and clicks on edit button of list and performs edit "{level}" and clicks on save button')
+def step_click_admin_qualifications_licenses_list_editbutton_save(context, level):
+    context.admin_page.click_admin_qualifications_licenses()
+    context.admin_page.click_admin_qualifications_list_editbutton(level)
+    context.admin_page.click_admin_qualifications_licenses_add_save()
+
+#Qualifications_licenses_list_editbutton_cancel
+@when('the user clicks on Qualifications for licenses and clicks on edit button of list and performs edit "{level}" and clicks on cancel button')
+def step_click_admin_qualifications_licenses_list_editbutton_cancel(context, level):
+    context.admin_page.click_admin_qualifications_licenses()
+    context.admin_page.click_admin_qualifications_list_editbutton(level)
+    context.admin_page.click_admin_qualifications_licenses_add_cancel()
+
 #Qualifications_languages_add_save
 @when('the user clicks on qualifications for languages and enters "{name}" and clicks on save button')
 def step_click_admin_qualifications_languages_add_save(context,name):
@@ -280,6 +346,32 @@ def step_click_admin_qualifications_languages_add_cancel(context,name):
     context.admin_page.click_admin_qualifications_languages_add(name)
     context.admin_page.click_admin_qualifications_languages_add_cancel()
 
+#Qualifications_languages_list_checkbox_delete
+@when('the user clicks on qualifications for languages and clicks on checkbox and clicks on alertcancel button')
+def step_click_admin_qualifications_languages_list_checkbox_delete(context):
+    context.admin_page.click_admin_qualifications_languages()
+    context.admin_page.click_admin_qualifications_list_checkbox_delete()
+
+#Qualifications_languages_list_deletebutton
+@when('the user clicks on qualifications for languages and clicks on delete button of list and clicks on alertcancel button')
+def step_click_admin_qualifications_languages_list_deletebutton(context):
+    context.admin_page.click_admin_qualifications_languages()
+    context.admin_page.click_admin_qualifications_list_deletebutton()
+
+#Qualifications_languages_list_editbutton_save
+@when('the user clicks on Qualifications for languages and clicks on edit button of list and performs edit "{level}" and clicks on save button')
+def step_click_admin_qualifications_languages_list_editbutton_save(context, level):
+    context.admin_page.click_admin_qualifications_languages()
+    context.admin_page.click_admin_qualifications_list_editbutton(level)
+    context.admin_page.click_admin_qualifications_languages_add_save()
+
+#Qualifications_languages_list_editbutton_cancel
+@when('the user clicks on Qualifications for languages and clicks on edit button of list and performs edit "{level}" and clicks on cancel button')
+def step_click_admin_qualifications_languages_list_editbutton_cancel(context, level):
+    context.admin_page.click_admin_qualifications_languages()
+    context.admin_page.click_admin_qualifications_list_editbutton(level)
+    context.admin_page.click_admin_qualifications_languages_add_cancel()
+
 #Qualifications_memberships_add_save
 @when('the user clicks on qualifications for memberships and enters "{name}" and clicks on save button')
 def step_click_admin_qualifications_memberships_add_save(context,name):
@@ -292,6 +384,32 @@ def step_click_admin_qualifications_memberships_add_save(context,name):
 def step_click_admin_qualifications_memberships_add_cancel(context,name):
     context.admin_page.click_admin_qualifications_memberships()
     context.admin_page.click_admin_qualifications_memberships_add(name)
+    context.admin_page.click_admin_qualifications_memberships_add_cancel()
+
+#Qualifications_memberships_list_checkbox_delete
+@when('the user clicks on qualifications for memberships and clicks on checkbox and clicks on alertcancel button')
+def step_click_admin_qualifications_memberships_list_checkbox_delete(context):
+    context.admin_page.click_admin_qualifications_memberships()
+    context.admin_page.click_admin_qualifications_list_checkbox_delete()
+
+#Qualifications_memberships_list_deletebutton
+@when('the user clicks on qualifications for memberships and clicks on delete button of list and clicks on alertcancel button')
+def step_click_admin_qualifications_memberships_list_deletebutton(context):
+    context.admin_page.click_admin_qualifications_memberships()
+    context.admin_page.click_admin_qualifications_list_deletebutton()
+
+#Qualifications_memberships_list_editbutton_save
+@when('the user clicks on Qualifications for memberships and clicks on edit button of list and performs edit "{level}" and clicks on save button')
+def step_click_admin_qualifications_memberships_list_editbutton_save(context, level):
+    context.admin_page.click_admin_qualifications_memberships()
+    context.admin_page.click_admin_qualifications_list_editbutton(level)
+    context.admin_page.click_admin_qualifications_memberships_add_save()
+
+#Qualifications_memberships_list_editbutton_cancel
+@when('the user clicks on Qualifications for memberships and clicks on edit button of list and performs edit "{level}" and clicks on cancel button')
+def step_click_admin_qualifications_memberships_list_editbutton_cancel(context, level):
+    context.admin_page.click_admin_qualifications_memberships()
+    context.admin_page.click_admin_qualifications_list_editbutton(level)
     context.admin_page.click_admin_qualifications_memberships_add_cancel()
 
 """#myinfo_download

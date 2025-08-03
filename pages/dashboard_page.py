@@ -4,6 +4,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, NoSuchElementException, ElementNotInteractableException, ElementClickInterceptedException
 from utils.base_class import Baseclass
 from selenium.webdriver.support.ui import Select
+from pages.time_page import TimePage
 
 class DashboardPage(Baseclass):
 
